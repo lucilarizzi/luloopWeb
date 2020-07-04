@@ -1,0 +1,40 @@
+.paralax {
+    background-size: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+i:hover {
+    color: rgb(230, 230, 230);
+}
+
+img:hover {
+    opacity: 1;
+}
+
+img {
+    opacity: 0.6;
+}
+
+
+/* font responsive */
+
+@media screen and (min-width: 701px) {
+    h1 {
+        font-size: 33pt;
+    }
+}
+
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 12pt;
+    }
+}

@@ -1,0 +1,77 @@
+#gato {
+    position: fixed;
+    z-index: -1;
+    bottom: 0px;
+    left: 50px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/gato.png');
+}
+
+#content {
+    overflow: visible;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#container {
+    width: 100%;
+}
+
+.sticky {
+    background: #fff;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, .08);
+    position: fixed;
+    top: 0;
+    height: 120px;
+    width: 100%;
+    opacity: 1;
+}
+
+.container {
+    height: 100%;
+}
+
+.player {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.header {
+    background-color: #fff;
+}
+
+.fondo {
+    background-image: url('../../../assets/fondos/fondo.png');
+    min-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.fas>.fa-code :hover,
+.fab :hover,
+.fa-whatsapp:hover {
+    color: black;
+}
+
+.fa-whatsapp {
+    color: #25d366;
+}

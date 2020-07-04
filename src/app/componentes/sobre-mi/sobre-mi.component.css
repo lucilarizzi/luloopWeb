@@ -1,0 +1,90 @@
+.lead {
+    font-size: 14pt;
+}
+
+#content {
+    overflow: visible;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#container {
+    width: 100%;
+}
+
+#yo {
+    position: fixed;
+    z-index: -1;
+    bottom: 0px;
+    background-image: url('../../../assets/quiensoy.jpg')
+}
+
+#square {
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/yo/blanco.jpg')
+}
+
+.img-fluid {
+    z-index: 0;
+    -webkit-box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+    box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+}
+
+
+/* font responsive */
+
+@media screen and (min-width: 701px) {
+    .info {
+        font-size: 12pt;
+    }
+    .info2 {
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 9pt;
+    }
+    #nombre {
+        font-size: 25pt;
+    }
+    .info-box {
+        /* margin: 10px; */
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 5px;
+        -webkit-box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+        box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+    }
+}
+
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+
+@media screen and (max-width: 700px) {
+    .info {
+        font-size: 10pt;
+    }
+    .info2 {
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 10pt;
+    }
+    #nombre {
+        font-size: 25pt
+    }
+    .img-fluid {
+        height: 440px;
+    }
+    .info-box {
+        border-radius: 10px;
+        background-color: transparent;
+        -webkit-box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+        box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.15);
+    }
+}

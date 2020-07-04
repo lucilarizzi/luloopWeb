@@ -1,0 +1,220 @@
+<app-modales></app-modales>
+<div *ngIf="hold" class="animated fadeIn">
+    <app-place-holder-inicio></app-place-holder-inicio>
+</div>
+<div *ngIf="!hold" class="animated fadeIn">
+    <nav class="navbar navbar-expand-lg navbar-light  mt-auto mb-auto d-none " id="navbar" style="z-index: 9999; height:10vh;">
+        <a class="navbar-brand" href="./#home">
+            <lottie-animation-view [options]="lottieConfig" [width]="100" [height]="50" (animCreated)="handleAnimation($event)">
+            </lottie-animation-view>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " style="background-color: white;" id="navbarText">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./#codigo"> <i class="fas fa-code  mx-2 mx-2" style="color:#17a2b8"></i>Código</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./#servicios" (click)="disenio()"> <i class="far fa-eye mx-2" style="color: #2bbbad"></i>Servicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./#sobreMi"> <i class="fas fa-heart mx-2" style="color: #673ab7;"></i>Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://api.whatsapp.com/send?phone=05491165318473">
+                        <i class="fab fa-whatsapp fa-2x fa-fw ml-5 mr-5" style="color: #25d366"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a>
+                        <i class="fas fa-exchange-alt fa-2x fa-fw ml-5 mr-5" style="color: #063f1b" (click)="cambiarPagina('1')" mdbTooltip=" Cambiar" placement="top" mdbWavesEffect></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a>
+                        <div>
+                            <i class="fas fa-desktop fa-2x fa-fw ml-5 " style="color: #063f1b" (click)="cambiarPagina('3')" mdbTooltip="Doble Monitor" placement="top" mdbWavesEffect></i>
+
+                        </div>
+
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div *ngIf="!otra">
+        <!-- Masthead -->
+        <header class="masthead text-white text-center " id="home">
+            <div class="row align-middle">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 " id="fondo">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators  " data-slide-to="0" class="active animated bounce" (click)=" cambiarImagen()" mdbTooltip=" Cambiar" placement="right" mdbWavesEffect></li>
+                    </ol>
+
+                    <div id="player">
+                        <lottie-animation-view [options]="lottieConfig" [width]="200" [height]="150" (animCreated)="handleAnimation($event)">
+                        </lottie-animation-view>
+                        <div class="row">
+                            <div class="col-4"></div>
+                            <div class="col-4">
+
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 bg-light container align-middle ">
+                    <div class="row pt-5 pb-5 ml-2 mr-2 ">
+                        <div class=" col-4  animated fadeInUp delay-1s">
+                            <div class="features-icons-item mx-auto mb-1 mb-0 mb-1 ">
+                                <a href="./#codigo">
+                                    <div class="features-icons-icon d-flex">
+                                        <i class="fas fa-code m-auto text-info" id="codee" style="font-size: 27pt;"></i>
+                                    </div>
+                                    <h3 class="text-info">Código</h3>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class=" col-4  animated fadeInUp delay-2s">
+                            <div class="features-icons-item mx-auto  mb-0 mb-1">
+                                <a href="./#servicios">
+                                    <div class="features-icons-icon d-flex">
+                                        <i class="far fa-eye m-auto text-default" style="font-size: 27pt;"></i>
+                                    </div>
+                                    <h3 class="text-default">Servicio</h3>
+                                </a>
+                            </div>
+                        </div>
+                        <div class=" col-4 animated fadeInUp delay-3s">
+                            <div class="features-icons-item mx-auto mb-0 mb-1">
+                                <a href="./#sobreMi">
+                                    <div class="features-icons-icon d-flex">
+                                        <i class="fas fa-heart m-auto deep-purple-text" style="font-size: 27pt;"></i>
+                                    </div>
+                                    <h3 class="deep-purple-text">Inicio</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="construccion" class="animated flash" style="height: 7vh ;opacity: 0.8; color: black ; background-color: rgb(240, 240, 125) ;   display: flex; width: 100%; font-family:  Roboto; font-weight: 700;align-items: center;
+    justify-content: center;">Pagina en Construccion</div>
+            </div>
+        </header>
+
+        <!-- Testimonials -->
+
+        <div class="row pb-3 pt-3 grey lighten-2" data-aos="fade-up" data-aos-duration="500">
+            <div class="col-12 col-lg-10 ml-auto mr-auto">
+                <!--   <app-prueuba-parallax></app-prueuba-parallax> -->
+                <!-- <app-trabajos-destacados></app-trabajos-destacados> -->
+                <app-nuevo-home></app-nuevo-home>
+            </div>
+        </div>
+        <!--     <div id="disenio"></div>
+        <section class="testimonials text-center default-color pt-5" data-aos="fade-up" data-aos-duration="500">
+            <div class="row">
+                <div class="col-12">
+                    <app-carrousel></app-carrousel>
+                </div>
+            </div>
+        </section> -->
+
+        <div id="servicios"></div>
+        <div style="padding-top: 15vh; padding-bottom: 15vh; background-color: #f1f1f1 ;">
+
+            <div class="col-12 text-center ">
+                <h2 style="font-weight: 800; font-family: 'Playfair Display', ;" class="mt-1 mb-1">
+                    Servicios
+                </h2>
+                <hr>
+            </div>
+            <app-servicios></app-servicios>
+        </div>
+        <div id="codigo"></div>
+        <div style="padding-top: 15vh; padding-bottom: 15vh; background-color: #17a2b8" data-aos="fade-up" data-aos-duration="500">
+
+            <div class="col-12 text-center ">
+                <h2 style="font-weight: 800; font-family: 'Playfair Display', ;" class="mt-1 mb-1">
+                    Codigos
+                </h2>
+                <hr>
+            </div>
+            <app-codigo></app-codigo>
+        </div>
+        <div style=" background-color: #ffffff">
+            <app-clientes></app-clientes>
+        </div>
+
+
+
+        <!--   <div id="sobreMi"></div>
+
+        <div style="padding-top:  5vh; margin-bottom:  5vh;">
+            <app-sobre-mi></app-sobre-mi>
+        </div> -->
+        <footer class="footer bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 h-100 text-center my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item ">
+                                <a href="https://github.com/lucilarizzi">
+                                    <i class="fab fa-github fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ">
+                                <a href="https://www.linkedin.com/in/lucila-rizzi-6754731b/">
+
+                                    <i class="fab fa-linkedin fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ">
+                                <a href="https://www.behance.net/luloop">
+                                    <i class="fab fa-behance fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ">
+                                <a href="https://twitter.com/lucilarizzi">
+                                    <i class="fab fa-twitter fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ">
+                                <a href="https://instagram.com/luloop2">
+                                    <i class="fab fa-instagram fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item ">
+                                <a href="https://api.whatsapp.com/send?phone=05491165318473">
+                                    <i class="fab fa-whatsapp fa-2x fa-fw "></i> <span style="color: white;"> </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item mr-auto ml-auto ">
+                                <a href="https://api.whatsapp.com/send?phone=05491165318473">
+                                    <span style="font-size: 8pt">© Copyright 2019 - 2020 Lucila Rizzi | Diseño,
+                                        Programación y Desarrollo Web </span>
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div *ngIf="otra">
+        <app-home></app-home>
+    </div>
+
+</div>
+
+<!-- Footer -->
+
+
+<!-- Bootstrap core JavaScript -->

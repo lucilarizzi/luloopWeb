@@ -1,0 +1,50 @@
+.card-columns {
+    column-count: 2;
+}
+
+
+/* img {
+    border-radius: 20px;
+    height: 30%
+} */
+
+li {
+    font-weight: 500;
+}
+
+ul {
+    list-style: none
+}
+
+.btn {
+    border-radius: 25px;
+}
+
+
+/* font responsive */
+
+@media screen and (min-width: 801px) {
+    .badge {
+        font-size: 11pt;
+    }
+    p {
+        font-size: x-large;
+    }
+    button {
+        font-size: 15pt;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .badge {
+        font-size: 9pt;
+    }
+    p {
+        font-size: smaller;
+    }
+    button {
+        width: 100%;
+        font-size: x-small;
+    }
+}
